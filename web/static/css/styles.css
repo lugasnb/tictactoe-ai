@@ -1,0 +1,114 @@
+/* Atur latar belakang dan font */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Kontainer utama */
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    width: 400px;
+}
+
+/* Judul */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #555555;
+}
+
+/* Tata letak papan permainan */
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    justify-content: center;
+    margin: 0 auto 20px auto;
+}
+
+#board div {
+    width: 100px;
+    height: 100px;
+    background: #e0e0e0;
+    border: 2px solid #cccccc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #555555;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+/* Warna untuk X dan O */
+#board div.X {
+    color: #dc3545;
+}
+
+#board div.O {
+    color: #007bff;
+}
+
+#board div:hover {
+    background: #d6d6d6;
+}
+
+/* Tombol reset */
+#reset {
+    background: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+#reset:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Efek untuk menang, kalah, atau seri */
+#board div.winner {
+    background: #28a745;
+    color: #ffffff;
+}
+
+#board div.loser {
+    background: #dc3545;
+    color: #ffffff;
+}
+
+/* Responsif */
+@media (max-width: 500px) {
+    .container {
+        width: 90%;
+    }
+
+    #board {
+        grid-template-columns: repeat(3, 80px);
+        grid-gap: 8px;
+    }
+
+    #board div {
+        width: 80px;
+        height: 80px;
+        font-size: 1.2rem;
+    }
+}
