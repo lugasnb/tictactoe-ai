@@ -2,4 +2,10 @@
 
 Game Tic-Tac-Toe melawan AI
 
-![Tic-Tac-Toe](images/tictactoe.png)
+Versi WEB
+
+![Tic-Tac-Toe](images/tictactoe-web.png)
+
+Versi Dekstop
+
+![Tic-Tac-Toe](images/tictactoe-dekstop.png)
